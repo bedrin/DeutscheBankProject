@@ -40,10 +40,10 @@ public class UploadingController {
     @Autowired
     BrentOilRepository brentOilRepository;
 
-    @Value("${intrinioUsername}")
+    @Value("${intrinioUsername:null}")
     String username;
 
-    @Value("${intrinioPassword}")
+    @Value("${intrinioPassword:null}")
     String password;
 
     @PostMapping(value = "/uploadValues", consumes = {"application/json"})
